@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog Tech</title>
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #183C63;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        main {
+            background-color: #d4adcf;
+            color: #183C63;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        article {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .artigo-conteudo {
+            max-width: 70%;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .imagem-post {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        button {
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+
+        footer {
+            background-color: #183C63;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Meu blog tech</h1>
+        <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
+    </header>
+
+    <main id="blog-posts">
+        <!-- Posts serão gerados dinamicamente ou mantidos organizados aqui -->
+        <article>
+            <div class="artigo-conteudo">
+                <h2>Meu primeiro post</h2>
+                <p class="artigo-autor">Por: Alexandra</p>
+                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
+                <button class="btn-like">❤️ <span class="count">0</span></button>
+                <button class="btn-dislike">👎 <span class="count">0</span></button>
+            </div>
+            <div>
+                <img src="imagem-blog.png" alt="Ilustração de tecnologia" class="imagem-post">
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2026 Meu Blog Tech | Desenvolvido por Alexandra</p>
+    </footer>
+
+    <script>
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach((botao) => {
+            let ativo = false;
+            
+            botao.addEventListener("click", () => {
+                const contador = botao.querySelector(".count");
+                let valor = parseInt(contador.textContent);
+
+                if (!ativo) {
+                    contador.textContent = valor + 1;
+                    ativo = true;
+                    botao.style.backgroundColor = "#e0e0e0";
+                } else {
+                    contador.textContent = valor - 1;
+                    ativo = false;
+                    botao.style.backgroundColor = "#f0f0f0";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
