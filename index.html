@@ -188,7 +188,7 @@
         }
 
         main {
-            background-color: #d4adcf;
+            background-color: #53c7eb;
             color: #183C63;
             display: flex;
             flex-direction: column;
@@ -221,6 +221,14 @@
                     <button type="button" class="btn-enviar" onclick="verificarQuiz()">Ver Resultado</button>
                 </form>
                 <div id="resultado-quiz"></div>
+                <h2>Quiz: Como é o seu comportamento digital?</h2>
+                <form id="quizForm">
+                    <p><strong>1. Quando você recebe uma mensagem alarmante em um grupo, o que faz?</strong></p>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="errada"> Compartilho com todos para alertar rápido.
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" va
             </div>
         </article>
     </main>
@@ -242,6 +250,14 @@
             }
 
             let acertos = 0;
+                <h2>Quiz: Como é o seu comportamento digital?</h2>
+                <form id="quizForm">
+                    <p><strong>1. Quando você recebe uma mensagem alarmante em um grupo, o que faz?</strong></p>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="errada"> Compartilho com todos para alertar rápido.
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" va
             if (q1.value === 'correta') acertos++;
             if (q2.value === 'correta') acertos++;
 
